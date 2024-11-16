@@ -12,34 +12,9 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 5px 20px;
-  background-color: #34495e;
-  color: white;
+  background-color: white;
+  color: var(--blue);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-/* Menu com itens lado a lado */
-.menu {
-  display: flex;
-  gap: 15px; /* Espaço entre os links */
-}
-
-/* Links do menu */
-.menu a {
-  color: white;
-  text-decoration: none;
-  padding: 8px 12px;
-  border-radius: 5px;
-  transition: background-color 0.3s;
-}
-
-.menu a:hover {
-  background-color: #16a085;
-}
-
-/* Imagem à direita */
-.image-container img {
-  height: 40px;
-  border-radius: 5px;
 }
 
 /* Conteúdo da página */
@@ -50,24 +25,40 @@ header {
   padding: 20px;
 }
 
-h1 {
-  font-size: 36px;
-  color: #34495e;
+/* Menu com itens lado a lado */
+.menu {
+  display: flex;
+  gap: 15px; /* Espaço entre os links */
 }
+
 /* Links do menu */
 .menu a {
-  color: white;
-  text-decoration: none;
+  color: black;
+  font-weight: 510;
   padding: 8px 12px;
   border-radius: 5px;
   transition: background-color 0.3s;
 }
 
 .menu a:hover {
-  background-color: #2c3e50;
+  background-color:  var(--gray);
+  color: white;
 }
 
 /* Estilo do link ativo */
 .menu a.active {
-  background-color: #16a085; /* Cor fixa para o link ativo */
+  background-color: var(--blue); /* Cor fixa para o link ativo */
+  color: white;
 }
+
+/* Imagem à direita */
+.image-container img {
+  height: 40px;
+  border-radius: 5px;
+}
+
+h1 {
+  font-size: 36px;
+  color: #34495e;
+}
+

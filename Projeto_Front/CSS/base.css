@@ -1,0 +1,105 @@
+@charset "UTF-8";
+
+/* Variaveis globais */
+:root { 
+    --blue: #0019FF;
+    --light-blue: #00CCFF;
+    --gray: #999999;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Source Sans Pro', Arial, sans-serif;
+    border: none;
+    list-style-type: none;
+    text-decoration: none;
+    outline: none;
+    word-break: keep-all;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100dvh;
+    background-color: var(--dark-blue);
+}
+
+
+
+/* Footer */
+
+.footer-padrao {
+    position: relative;
+    width: 100%;
+    background-color: white;
+    padding: 2rem;
+}
+
+.box-footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#redes-sociais {
+    display: flex;
+    flex-direction: column;
+
+    margin: auto;
+    font-weight: bold;
+}
+
+.icons-redes-sociais {
+    display: flex;
+    justify-content: center;
+    margin-top: .8rem;
+    cursor: pointer;
+}
+
+.bi {
+    font-size: 2rem;
+    color: var(--blue);
+    margin: 0 .5rem;
+
+    transition: .3s ease;
+}
+
+.bi:hover {
+    color: var(--gray);
+}
+
+#endereco {
+    display: flex;
+    flex-direction: column;
+    word-wrap: break-word;
+
+    margin: auto;
+    font-weight: bold;
+}
+
+.text-endereco {
+    margin-top: .8rem;
+    font-weight: 500;
+    font-stretch: semi-expanded;
+}
+
+.text-endereco a {
+    color: var(--blue);;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.text-endereco a:hover {
+    color: var(--gray);
+}
+
+.text-taguatinga {
+    width: 80%;
+    margin-bottom: .7rem;
+}
+
+.text-ceilandia {
+    width: 80%;
+}
+
