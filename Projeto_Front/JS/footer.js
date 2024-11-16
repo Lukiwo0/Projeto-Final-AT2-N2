@@ -29,23 +29,22 @@ const footer =
     </div>
   </div>
   <div id="endereco">
-    <p>Ache-nos</p>
-
-    <div class="text-endereco">
-      <div class="text-taguatinga">
+    <p class="title-endereco">Ache-nos</p>
+    
+        <p class="text-endereco">
         <a href="https://g.co/kgs/dtAJYFP" target="_blank">
           Câmpus Taguatinga QS 07 – Lote 01 – EPCT – Taguatinga, Brasília/DF - CEP: 71966-700
-        </a>
-        <p>Telefone: 61 3356-9000</p>
-      </div>
-
-      <div class="text-ceilandia">
+        </a> <br>
+        Telefone: 61 3356-9000
+        </p>
+      
+        <p class="text-endereco">
         <a href="https://g.co/kgs/4z9hHpq" target="_blank">
           Câmpus Ceilândia St. N QNN 31 - Ceilândia, Brasília - DF, CEP: 72225-310
-        </a>
-        <p>Telefone: 3356-9202</p>
-      </div>
-    </div>
+        </a> <br>
+        Telefone: 3356-9202
+        </p>
+      
   </div>
 </div>
 </footer>
