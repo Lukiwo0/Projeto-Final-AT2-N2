@@ -56,9 +56,10 @@ header {
 
 /* Conteúdo da página */
 .content {
-  flex-grow: 1;
-  display: flex;
   background-color: #ecf0f1;
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
   padding: 20px;
 }
 
