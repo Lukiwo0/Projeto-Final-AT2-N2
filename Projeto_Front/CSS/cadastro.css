@@ -8,9 +8,14 @@ body {
   align-items: center;
 }
 
+label {
+  margin-bottom: 0;
+}
+
 .title {
   color: var(--blue);
   margin-bottom: 20px;
+  font-weight: bold;
 }
 
 .form-box {
@@ -28,7 +33,7 @@ body {
   text-align: left;
 }
 
-#cadastro-form label {
+.form-label {
   margin-bottom: .8rem;
   font-size: 1rem;
   font-weight: bold;
@@ -47,10 +52,33 @@ input[type="password"] {
   box-sizing: border-box;
 }
 
+.checkbox-group {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: .9rem;
+}
+
+.checkbox-label {
+  margin-left: .2rem;
+  margin-right: .5rem;
+}
+
+.checkbox-href {
+  color: var(--blue);
+}
+
+#system-response p {
+  margin-bottom: 0;
+}
+
 #system-response {
   color: red;
   text-align: start;
+  margin-top: .5rem;
+  margin-left: .2rem;
 }
+
 
 .btn-cadastrar {
   background-color: var(--gray);

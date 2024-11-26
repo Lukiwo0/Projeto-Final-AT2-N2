@@ -29,18 +29,28 @@
       <h1 class="title">Cadastro</h1>
 
       <div class="form-group">
-        <label for="nome">Nome:</label>
+        <label for="nome" class="form-label">Nome:</label>
         <input type="text" id="nome" name="nome" placeholder="Nome de Usuário" />
       </div>
 
       <div class="form-group">
-        <label for="email">E-mail:</label>
+        <label for="email" class="form-label">E-mail:</label>
         <input type="email" id="email" name="email" placeholder="Digite seu Email" />
       </div>
 
       <div class="form-group">
-        <label for="senha">Senha:</label>
+        <label for="senha" class="form-label">Senha:</label>
         <input type="password" id="senha" name="senha" placeholder="Digite uma Senha" />
+      </div>
+
+      <div class="checkbox-group">
+        <input type="checkbox" name="aceitar termos" id="accept-terms" class="checkbox-label">
+        <label for="aceitar-termos">Eu li e aceito os <a href="#" target="_blank" class="checkbox-href">termos e
+            condições</a>.</label>
+      </div>
+      <div class="checkbox-group">
+        <input type="checkbox" name="Notificação Email" id="email-notificationss" class="checkbox-label">
+        <label for="email-notifications">Quero receber notificações no meu e-mail.</label>
       </div>
 
       <div id="system-response"></div>
@@ -73,16 +83,29 @@
       event.preventDefault(); // Impedi o envio do form
 
       // Pegar os valores dos campos email e senha
-      const email = document.getElementById('email').value;
-      const senha = document.getElementById('senha').value;
+      const nome = document.getElementById('nome').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const senha = document.getElementById('senha').value.trim();
+      const terms = document.getElementById('accept-terms').checked;
+      const responseElement = document.getElementById('system-response');
 
-      if (email && senha) { // Verificar se o campo tá vazio
-        window.location.href = `login.html`
-      } else {
-        document.getElementById('system-response').innerHTML =
+      responseElement.innerHTML = '';
+
+      if (!nome || !email || !senha) { // Verificar se o campo tá vazio
+        responseElement.innerHTML =
           `<p>Por favor, preencha todos os campos!</p>`
+        return;
       }
-    })
+
+      if (!terms) { // Verificar se o campo tá vazio
+        responseElement.innerHTML =
+          `<p>Por favor, leia e aceite os termos e condições!</p>`
+        return;
+      }
+
+      window.location.href = `login.html`;
+
+    });
   </script>
 
 </body>
