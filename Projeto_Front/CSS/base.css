@@ -56,7 +56,11 @@ header {
 
 /* Conteúdo da página */
 .content {
-  background-color: #ecf0f1;
+  background-image: url('../IMG/catolica.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
   display: flex;
   justify-content: center;
   flex-grow: 1;
