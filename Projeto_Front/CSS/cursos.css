@@ -1,0 +1,42 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    justify-content: center;
+    padding: 10px;
+}
+
+.card {
+    flex: 1 1 calc(21rem + 16px);
+    max-width: calc(21rem + 16px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);    
+    margin: 4px;
+}
+
+.card:hover {
+    transform: scale(1.10);
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2)
+}
+.card h5.card-title {
+    color: blue;
+    text-align: center;
+    border-bottom: 1px solid black;
+    padding: 5px;
+    width: 70%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+.card p.card-text {
+    text-align: center;
+}
+.btn-primary {
+    margin-left: 110px;
+}
+
+.btn-primary:hover {
+    color: blue;
+    background-color: white;
+    border-color: blue;
+}
