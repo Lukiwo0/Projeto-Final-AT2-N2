@@ -63,9 +63,31 @@
     </div>
   </div>
 
+  <div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="modalTitle" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalTitle">Cadastro Realizado</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Seu cadastro foi realizado com sucesso! Você será redirecionado para a página de login.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-dismiss="modal">Ok</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- Footer Js -->
   <script src="../JS/footer.js"></script>
+
+  <!-- jQuery primeiro, depois Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
 
   <script>
     document.getElementById('cadastro-form').addEventListener('submit', function (event) {
@@ -82,18 +104,23 @@
 
       if (!nome || !email || !senha) { // Verificar se o campo tá vazio
         responseElement.innerHTML =
-          `<p>Por favor, preencha todos os campos!</p>`
+          `<p>Por favor, preencha todos os campos!</p>`;
         return;
       }
 
-      if (!terms) { // Verificar se o campo tá vazio
+      if (!terms) { // Verificar se os termos foram aceitos
         responseElement.innerHTML =
-          `<p>Por favor, leia e aceite os termos e condições!</p>`
+          `<p>Por favor, leia e aceite os termos e condições!</p>`;
         return;
       }
 
-      window.location.href = `login.html`;
+      // Mostrar modal de sucesso
+      $('#successModal').modal('show');
 
+      // Redirecionar para a página de login após 3 segundos
+      setTimeout(() => {
+        window.location.href = 'login.html';
+      }, 3000);
     });
   </script>
 
